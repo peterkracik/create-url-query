@@ -11,8 +11,11 @@
 
 	function createUrlQuery() {
 		var getParam = [];
+		if (!arg) continue;
 
-        if (argType === 'object') {
+		var argType = typeof arg;
+
+		if (argType === 'object') {
             for (var key in arg) {
                 if (hasOwn.call(arg, key) && arg[key]) {
 					var partParam = String(key) + "=" + String(arg[key]);

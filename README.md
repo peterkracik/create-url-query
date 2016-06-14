@@ -1,5 +1,5 @@
 # create-url-query
-A simple utility for conditionally for creating get parameters base on the object
+A simple utility for creating get parameters base on the object
 
 ## how to
 
