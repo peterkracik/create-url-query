@@ -15,7 +15,7 @@
         if (argType === 'object') {
             for (var key in arg) {
                 if (hasOwn.call(arg, key) && arg[key]) {
-					var partParam = key + "=" + arg[key];
+					var partParam = String(key) + "=" + String(arg[key]);
                     getParam.push(partParam);
                 }
             }
@@ -23,27 +23,8 @@
 			return "";
 		}
 
-		// for (var i = 0; i < arguments.length; i++) {
-		// 	var arg = arguments[i];
-		// 	if (!arg) continue;
-		//
-		// 	var argType = typeof arg;
-		//
-		// 	if (argType === 'string' || argType === 'number') {
-        //         var partParam =
-		// 		getParam.push(arg);
-		// 	} else if (Array.isArray(arg)) {
-		// 		getParam.push(getParameters.apply(null, arg));
-		// 	} else if (argType === 'object') {
-		// 		for (var key in arg) {
-		// 			if (hasOwn.call(arg, key) && arg[key]) {
-		// 				getParam.push(key);
-		// 			}
-		// 		}
-		// 	}
-		// }
-
-		return getParam.join('?');
+		var str = (getParam.length > 0) ? "?"+getParam.join('&') : "";
+		return str;
 	}
 
 	if (typeof module !== 'undefined' && module.exports) {
