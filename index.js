@@ -11,8 +11,11 @@
 
 	function createUrlQuery() {
 		var getParam = [];
-		if (!arg) continue;
-
+		if (!arguments || !arguments.length) {
+			return "";
+		}
+		arg = arguments[0];
+		
 		var argType = typeof arg;
 
 		if (argType === 'object') {
