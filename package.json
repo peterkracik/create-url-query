@@ -1,0 +1,23 @@
+{
+  "name": "create-url-query",
+  "version": "0.0.1",
+  "description": "A simple utility for conditionally for creating get parameters base on the object",
+  "main": "index.js",
+  "author": "Peter Kracik",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hatto/create-url-query.git"
+  },
+  "scripts": {
+  },
+  "keywords": [
+    "url",
+    "GET",
+    "link",
+    "util",
+    "utility"
+  ],
+  "devDependencies": {
+  }
+}
