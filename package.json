@@ -9,7 +9,9 @@
     "type": "git",
     "url": "https://github.com/hatto/create-url-query.git"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
   "keywords": [
     "url",
     "GET",
@@ -17,5 +19,7 @@
     "util",
     "utility"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
 }
