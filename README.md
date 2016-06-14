@@ -2,7 +2,10 @@
 A simple utility for conditionally for creating get parameters base on the object
 
 ## how to
+
 ~~~~
+var createUrlQuery = require('create-url-query');
+
 var param = {
     param1: '1',
     param2: '2',
