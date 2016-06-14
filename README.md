@@ -13,3 +13,6 @@ var param = {
 };
 var url = "http://example.com/" + createUrlQuery(param);
 ~~~~
+
+**the result will be**
+http://example.com/?param1=1&param2=2&param3=3
