@@ -14,9 +14,9 @@
 		if (!arguments || !arguments.length) {
 			return "";
 		}
-		arg = arguments[0];
-		
-		var argType = typeof arg;
+		var arg 	= arguments[0],
+			argType = typeof arg
+		;
 
 		if (argType === 'object') {
             for (var key in arg) {
