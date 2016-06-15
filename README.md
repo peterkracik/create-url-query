@@ -1,6 +1,12 @@
 # create-url-query
 A simple utility for creating get parameters base on the object
 
+## install
+
+~~~
+npm install create-url-query --save-dev
+~~~
+
 ## how to
 
 ~~~~
