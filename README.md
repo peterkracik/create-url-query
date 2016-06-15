@@ -15,7 +15,8 @@ var createUrlQuery = require('create-url-query');
 var param = {
     param1: '1',
     param2: '2',
-    param3: 3
+    param3: 3,
+    param4: null
 };
 var url = "http://example.com/" + createUrlQuery(param);
 ~~~~
