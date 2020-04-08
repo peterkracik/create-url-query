@@ -9,28 +9,41 @@
 
 	var hasOwn = {}.hasOwnProperty;
 
-	function createUrlQuery() {
-		var getParam = [];
+	const createUrlQuery = () => {
+		const getParam = [];
 		if (!arguments || !arguments.length) {
 			return "";
 		}
-		var arg 	= arguments[0],
+		const arg 	= arguments[0],
 			argType = typeof arg
 		;
 
 		if (argType === 'object') {
-            for (var key in arg) {
-                if (hasOwn.call(arg, key) && arg[key]) {
-					var partParam = String(key) + "=" + String(arg[key]);
-                    getParam.push(partParam);
-                }
-            }
+			getParam = convertObject(arg);
         } else {
 			return "";
 		}
 
-		var str = (getParam.length > 0) ? "?"+getParam.join('&') : "";
+		const str = (getParam.length > 0) ? "?"+getParam : "";
 		return str;
+	}
+
+	const convertObject = (obj, parent=null) => {
+		const params = [];
+		for (let key in obj) {
+			if (hasOwn.call(obj, key) && obj[key]) {
+				let partParam = "";
+				let index = String(key);
+				if (typeof obj[key] === 'object') {
+					partParam = convertObject(obj[key], index);
+				} else {
+					index = (parent) ? `${parent}[${index}]` : index;
+					partParam = index + "=" + String(obj[key]);
+				}
+				params.push(partParam);
+			}
+		}
+		return params.join('&');
 	}
 
 	if (typeof module !== 'undefined' && module.exports) {

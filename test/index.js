@@ -9,8 +9,15 @@ describe('createUrlQuery', function () {
 			param1: 'value1',
 			param2: 2,
 			param3: null,
-            param4: true
-		}), '?param1=value1&param2=2&param4=true');
+			param4: true,
+			param5: {
+				a: 1,
+				b: 2,
+				// subparam3: {
+				// 	subsub3: 'subsub'
+				// }
+			}
+		}), '?param1=value1&param2=2&param4=true&param5[a]=1&param5[b]=2');
 	});
 
 	it('returns empty string from empty object', function () {
