@@ -9,23 +9,11 @@
 
 	var hasOwn = {}.hasOwnProperty;
 
-	const createUrlQuery = () => {
-		const getParam = [];
-		if (!arguments || !arguments.length) {
-			return "";
-		}
-		const arg 	= arguments[0],
-			argType = typeof arg
-		;
+	const createUrlQuery = (obj) => {
+		if (!obj || typeof obj !== 'object') return "";
 
-		if (argType === 'object') {
-			getParam = convertObject(arg);
-        } else {
-			return "";
-		}
-
-		const str = (getParam.length > 0) ? "?"+getParam : "";
-		return str;
+		const getParam = convertObject(obj);
+		return (getParam.length > 0) ? "?"+getParam : "";
 	}
 
 	const convertObject = (obj, parent=null) => {

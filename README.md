@@ -16,10 +16,14 @@ var param = {
     param1: '1',
     param2: '2',
     param3: 3,
-    param4: null
+    param4: null,
+    param5: {
+        a: "foo",
+        b: "bar"
+    }
 };
 var url = "http://example.com/" + createUrlQuery(param);
 ~~~~
 
 **the result will be**
-http://example.com/?param1=1&param2=2&param3=3
+http://example.com/?param1=1&param2=2&param3=3&param5[a]=foo&param5[b]=bar

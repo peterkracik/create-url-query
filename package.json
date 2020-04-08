@@ -1,6 +1,6 @@
 {
   "name": "create-url-query",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "A simple utility for conditionally for creating get parameters base on the object",
   "main": "index.js",
   "author": "Peter Kracik",
@@ -20,6 +20,6 @@
     "utility"
   ],
   "devDependencies": {
-    "mocha": "^2.5.3"
+    "mocha": "^7.1.1"
   }
 }
